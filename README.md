@@ -7,10 +7,9 @@
 
 👩‍🎓 Interesting in Data science and learning about Machine Learning, Deep Learning nad Natural Language Processing.
 
-
+📫 You can reach me via: 
 ## 🖥️ Languages 
 
-<img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" />
 
 Python | R | MYSQL | MATLAB | SPSS | STATA
 
@@ -29,3 +28,4 @@ Multi-objective optimisation of multifaceted maintenance strategies for wind far
 [Ma, Y., Zhang, W., & Branke, J. (2022). Multi-objective optimisation of multifaceted maintenance strategies for wind farms. Journal of the Operational Research Society, 1-16.]
 
 
+<img src="https://github-readme-stats.vercel.app/api?username=zluvsand&show_icons=true"/>
