@@ -17,7 +17,9 @@
             <td width="80px" align="center">
             <span><strong>Python</strong></span><br>
             <img height="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
-            
+            </td>
+            <td width="80px" align="center">
+            <span><strong>Java</strong></span><br>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" />
           
                             </td>
