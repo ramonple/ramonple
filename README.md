@@ -26,4 +26,5 @@ Jupyter | Latex | Anaconda-Navigator | MS Office | G-suite
 [Multi-objective optimisation of multifaceted maintenance strategies for wind farms](https://www.tandfonline.com/doi/full/10.1080/01605682.2022.2085066)
 
 <img src="https://github-readme-stats.vercel.app/api?username=ramonple&show_icons=true"/>
+
 <img src="https://github-readme-stats.vercel.app/api/top-langs?username=ramonple&layout=compact"/>
