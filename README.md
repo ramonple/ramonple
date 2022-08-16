@@ -28,4 +28,4 @@ Multi-objective optimisation of multifaceted maintenance strategies for wind far
 [Ma, Y., Zhang, W., & Branke, J. (2022). Multi-objective optimisation of multifaceted maintenance strategies for wind farms. Journal of the Operational Research Society, 1-16.]
 
 
-<img src="https://github-readme-stats.vercel.app/api?username=zluvsand&show_icons=true"/>
+<img src="https://github-readme-stats.vercel.app/api?username=ramonple&show_icons=true"/>
