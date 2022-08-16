@@ -11,7 +11,13 @@
 
 ## 🖥️ Languages 
 
-<code><img width="10%" src="https://www.vectorlogo.zone/logos/python/python-ar21.svg"></code>
+<table width="320px">
+    <tbody>
+        <tr valign="top">
+            <td width="80px" align="center">
+            <span><strong>Python</strong></span><br>
+            <img height="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+
 Python | R | MYSQL | MATLAB | SPSS | STATA
 
 ##   Python Libraries
