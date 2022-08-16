@@ -9,16 +9,16 @@
 
 
 ## 🖥️ Languages
-Python R MYSQL MATLAB SPSS STATA
+Python | R | MYSQL | MATLAB | SPSS | STATA
 
 ## ✨ Python Libraries
-NumPy Pandas Scikit-Learn Matplotliab Seaborn SciPy TensorFlow
+NumPy | Pandas | Scikit-Learn | Matplotliab | Seaborn | SciPy | TensorFlow
 
 ## 🔗 Cloud Platform
 Azure
 
 ## 📂 Tool
-Jupyter Latex Anaconda-Navigator MS Office G-suite
+Jupyter | Latex | Anaconda-Navigator | MS Office | G-suite
 
 ## 📄 Publications
 Multi-objective optimisation of multifaceted maintenance strategies for wind farms
