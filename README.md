@@ -7,7 +7,8 @@
 
 👩‍🎓 Interesting in Data science and learning about Machine Learning, Deep Learning nad Natural Language Processing.
 
-📫 You can reach me via: 
+📫 You can reach me via: [![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yikaima335337/) 
+
 ## 🖥️ Languages 
 
 
@@ -29,3 +30,4 @@ Multi-objective optimisation of multifaceted maintenance strategies for wind far
 
 
 <img src="https://github-readme-stats.vercel.app/api?username=ramonple&show_icons=true"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs?username=ramonple&layout=compact"/>
