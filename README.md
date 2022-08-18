@@ -1,13 +1,13 @@
-# YIKAI MA [![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yikaima335337/) 
+# YIKAI MA 
 
 ## Quick Facts
 🔭 I’m currently working as a PhD researcher in Operations Research.
 
-📊 Statistics and Mathematics background.
+📊 Statistics (Ms) and Mathematics (Bs) background.
 
-👩‍🎓 Interesting in Data science and learning about Machine Learning, Deep Learning nad Natural Language Processing.
+👩‍🎓 Interesting in Data science, Machine Learning, Deep Learning and Natural Language Processing.
 
-📫 You can reach me via: 
+📫 You can reach me via:  [![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yikaima335337/) 
 
 ## 🖥️ Languages  
 
