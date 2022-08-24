@@ -28,3 +28,5 @@ Jupyter | Latex | Anaconda-Navigator | MS Office | G-suite
 <img src="https://github-readme-stats.vercel.app/api?username=ramonple&show_icons=true"/>
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs?username=ramonple&layout=compact"/>
+
+![Leetcode Stats](https://leetcard.ramonple.cool/lapor?ext=contest)
