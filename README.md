@@ -1,9 +1,10 @@
 # YIKAI MA 
 
-## Quick Facts
-🔭 I’m currently working as a PhD researcher in Operations Research.
+current Data Scientist in BNPP
 
-📊 Statistics (Ms) and Mathematics (Bs) background.
+## Quick Facts
+
+📊 PhD in Operational Research and Statistics, Master in Statistics and Bachelor in Mathematics with Finance.
 
 👩‍🎓 Interesting in Data science, Machine Learning, Deep Learning and Natural Language Processing.
 
