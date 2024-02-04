@@ -1,6 +1,6 @@
 # YIKAI MA 
 
-current Data Scientist in BNPP
+Data Scientist in BNPP
 
 ## Quick Facts
 
