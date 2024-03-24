@@ -1,23 +1,23 @@
 # YIKAI MA 
 
-Data Scientist in BNP Paribas
+👋 Hello! I'm Yikai Ma, a Data Scientist at BNP Paribas, with a passion for leveraging data to derive insights and drive decision-making. 👩‍🎓 With a background in Statistics, Mathematics and Operational Research, I specialise in applying machine learning, deep learning, and natural language processing techniques to solve complex problems.
 
 ## Quick Facts
 
 📊 PhD in Operational Research and Statistics, Master in Statistics and Bachelor in Mathematics with Finance.
 
-👩‍🎓 Interesting in Data Science, Machine Learning, Deep Learning and Natural Language Processing.
+Interesting in Data Science, Machine Learning, Deep Learning and Natural Language Processing.
 
+## Contact Information
 📫 You can reach me via:  [![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yikaima335337/) 
 
-## 🖥️ Languages  
+## 🖥️ Languages and Libraries
 
-Python | R | MYSQL | MATLAB | SPSS | STATA
+- **Languages:** Python, R, MySQL, MATLAB, SPSS, STATA
+- **Python Libraries:** NumPy, Pandas, Scikit-Learn, Matplotlib, Seaborn, SciPy, TensorFlow
 
-##   Python Libraries
-NumPy | Pandas | Scikit-Learn | Matplotliab | Seaborn | SciPy | TensorFlow
 
-## 🔗 Cloud Platform
+## 🔗 Cloud Platform and Tools
 Azure
 
 ## 📂 Tool
