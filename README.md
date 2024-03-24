@@ -1,12 +1,12 @@
 # YIKAI MA 
 
-Data Scientist in BNPP
+Data Scientist in BNP Paribas
 
 ## Quick Facts
 
 📊 PhD in Operational Research and Statistics, Master in Statistics and Bachelor in Mathematics with Finance.
 
-👩‍🎓 Interesting in Data science, Machine Learning, Deep Learning and Natural Language Processing.
+👩‍🎓 Interesting in Data Science, Machine Learning, Deep Learning and Natural Language Processing.
 
 📫 You can reach me via:  [![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yikaima335337/) 
 
