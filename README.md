@@ -6,8 +6,6 @@
 
 📊 PhD in Operational Research and Statistics, Master in Statistics and Bachelor in Mathematics with Finance.
 
-Interesting in Data Science, Machine Learning, Deep Learning and Natural Language Processing.
-
 ## Contact Information
 📫 You can reach me via:  [![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yikaima335337/) 
 
