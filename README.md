@@ -12,7 +12,7 @@
 ## 🖥️ Languages and Libraries
 
 - **Languages:** Python, R, MySQL, MATLAB, SPSS, STATA
-- **Python Libraries:** NumPy, Pandas, Scikit-Learn, Matplotlib, Seaborn, SciPy, TensorFlow
+- **Python Libraries:** Pandas, Polars, Scikit-Learn, Matplotlib, Seaborn, SciPy, TensorFlow, NumPy, 
 
 
 ## 🔗 Cloud Platform and Tools
