@@ -1,6 +1,6 @@
 # YIKAI MA 
 
-👋 Hello! I'm Yikai Ma, a Data Scientist at BNP Paribas, with a passion for leveraging data to derive insights and drive decision-making. 👩‍🎓 With a background in Statistics, Mathematics and Operational Research, I specialise in applying machine learning, deep learning, and natural language processing techniques to solve complex problems.
+👋 Hello! I'm Yikai Ma, a current Data Scientist at BNPP, with a passion for leveraging data to derive insights and drive decision-making. 👩‍🎓 With a background in Statistics, Mathematics and Operational Research, I specialise in applying machine learning, deep learning, and natural language processing techniques to solve complex problems.
 
 ## Quick Facts
 
