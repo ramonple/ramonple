@@ -1,10 +1,10 @@
 # YIKAI MA 
 
-👋 Hello! I'm Yikai Ma, a current Data Scientist at BNPP, with a passion for leveraging data to derive insights and drive decision-making. 👩‍🎓 With a background in Statistics, Mathematics and Operational Research, I specialise in applying machine learning, deep learning, and natural language processing techniques to solve complex problems.
+👋 Hi, I am Yikai, a data scientist with expertise in risk modeling, predictive analytics, and machine learning. I apply advanced data science techniques to solve complex business problems across industries, from banking to Internet/Tech. Passionate about turning data into actionable insights and building scalable real-world solutions.
 
 ## Quick Facts
 
-📊 PhD in Operational Research and Statistics, Master in Statistics and Bachelor in Mathematics with Finance.
+📊 PhD in Operational Research and Statistics, Master's in Statistics, and Bachelor's in Mathematics with Finance.
 
 ## Contact Information
 📫 You can reach me via:  [![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yikaima335337/) 
