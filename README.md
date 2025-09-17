@@ -16,6 +16,8 @@
 
 ## 📄 Publications
 [Multi-objective optimisation of multifaceted maintenance strategies for wind farms](https://www.tandfonline.com/doi/full/10.1080/01605682.2022.2085066)
+[Genetic programming hyper-heuristic for evolving a maintenance policy for wind farms]([https://www.tandfonline.com/doi/full/10.1080/01605682.2022.2085066](https://link.springer.com/article/10.1007/s10732-024-09533-2))
+
 
 <img src="https://github-readme-stats.vercel.app/api?username=ramonple&show_icons=true"/>
 
