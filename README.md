@@ -40,9 +40,5 @@ Applied machine learning projects, explainable AI demos, optimisation-driven wor
 
 [Genetic programming hyper-heuristic for evolving a maintenance policy for wind farms](https://link.springer.com/article/10.1007/s10732-024-09533-2)
 
-
-<img src="https://github-readme-stats.vercel.app/api?username=ramonple&show_icons=true"/>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs?username=ramonple&layout=compact"/>
-
+---
 
