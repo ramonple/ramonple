@@ -1,10 +1,10 @@
 # Hi, I'm Yikai Ma 👋
 
 🎯 **Data Scientist | Machine Learning | Explainable AI | Optimisation**  
-💻 Python • SQL • R • SAS  
+💻 Python • SQL • R • SQL • SAS  
 
 I build **production-grade machine learning systems** focused on risk modelling, automated decisioning, and optimisation-driven analytics.  
-My interests sit at the intersection of **predictive modelling, explainable AI, and scalable ML pipelines**.
+My interests sit at the intersection of **predictive modelling, explainable AI (XAI), optimisation-driven decisioning, and MLOps**, with a focus on **scalable**, **governance-ready ML pipelines**.
 
 ---
 ## 🔧 Technical Skills
@@ -21,7 +21,7 @@ My interests sit at the intersection of **predictive modelling, explainable AI, 
 - Scalable ML pipelines  
 - Governance-ready and reproducible ML  
 
-**Tech stack:** Python, SQL, R, SAS · Scikit-learn · XGBoost · LightGBM · TensorFlow · Pandas · NumPy · Git · Jupyter
+**Tech stack:** Scikit-learn · XGBoost · LightGBM · TensorFlow · MLflow · Git · Pandas · NumPy · 
 
 ---
 
