@@ -1,19 +1,40 @@
-# YIKAI MA 
+# Hi, I'm Yikai Ma 👋
 
-👋 Hi, I am Yikai, a data scientist with expertise in risk modeling, predictive analytics, and machine learning. I apply advanced data science techniques to solve complex business problems across various industries, including banking and the Internet/Tech sector. Passionate about turning data into actionable insights and building scalable real-world solutions.
+🎯 **Data Scientist | Machine Learning | Explainable AI | Optimisation**  
+💻 Python • SQL • R • SAS  
 
-## Quick Facts
+I build **production-grade machine learning systems** focused on risk modelling, automated decisioning, and optimisation-driven analytics.  
+My interests sit at the intersection of **predictive modelling, explainable AI, and scalable ML pipelines**.
 
-📊 PhD in Operational Research and Statistics, Master's in Statistics, and Bachelor's in Mathematics with Finance.
+---
+## 🔧 Technical Skills
 
-## Contact Information
-📫 You can reach me via:  [![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yikaima335337/) 
+### Programming Languages  
+- Python, SQL, R, SAS
 
-## 🖥️ Programming Languages
+## 🔧 Core Skills
 
-- **Languages:** Python, R, SQL
+- End-to-end ML lifecycle (feature engineering → modelling → validation → deployment → monitoring)  
+- Predictive modelling & ensemble methods  
+- Explainable AI (SHAP, model interpretability)  
+- Optimisation & decision systems  
+- Scalable ML pipelines  
+- Governance-ready and reproducible ML  
+
+**Tech stack:** Python, SQL, R, SAS · Scikit-learn · XGBoost · LightGBM · TensorFlow · Pandas · NumPy · Git · Jupyter
+
+---
+
+## 🚀 What You'll Find Here
+
+Applied machine learning projects, explainable AI demos, optimisation-driven workflows, and end-to-end ML pipelines using synthetic or anonymised data.
+
+---
+
+⭐ *This GitHub showcases applied ML, explainable AI, and optimisation-driven data science projects.*
 
 
+---
 ## 📄 Publications
 [Multi-objective optimisation of multifaceted maintenance strategies for wind farms](https://www.tandfonline.com/doi/full/10.1080/01605682.2022.2085066)
 
