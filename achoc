@@ -1,0 +1,71 @@
+# Interpretable Risk Rule Engine
+
+This repository contains a Python-based framework for building, optimising and executing **interpretable risk rules** from structured data.
+
+The system supports feature selection, expert-constrained rule generation and business-aware optimisation for use in fraud, credit and compliance decisioning workflows.
+
+---
+
+## Purpose
+
+The engine is designed to:
+
+- Prepare and validate raw input data  
+- Identify stable and interpretable risk features  
+- Generate candidate risk rules under expert and monotonic constraints  
+- Optimise rule sets under configurable business objectives  
+- Execute and evaluate rules with full transparency and traceability  
+
+The framework prioritises **explainability, governance and reproducibility** over black-box performance.
+
+---
+
+## Main Components
+
+- **Data preparation** — cleaning, missing value imputation and schema validation  
+- **Feature selection** — statistical screening, correlation control and optional model-based importance with expert sign constraints  
+- **Rule construction** — automatic generation of 1D / 2D / 3D interpretable rules  
+- **Rule optimisation** — greedy and heuristic search under risk, loss and coverage constraints  
+- **Evaluation & visualisation** — baseline comparison, redundancy checks and performance diagnostics  
+- **Execution engine** — deterministic application of approved rules to new data  
+
+---
+
+## Usage
+
+Typical workflow:
+
+1. Prepare and validate input data  
+2. Run feature selection with expert constraints  
+3. Generate and optimise candidate rule sets  
+4. Review rule performance and redundancy diagnostics  
+5. Export approved rules and apply to production data  
+
+Detailed examples and configuration files are provided in the `notebooks/` and `examples/` directories.
+
+---
+
+## Governance & Safety
+
+- All rules are stored in a portable, versioned format  
+- Execution is deterministic and fully auditable  
+- Business thresholds, objectives and expert constraints are configurable  
+- Example datasets and sensitive configurations are intentionally excluded  
+
+---
+
+## Repository Structure
+
+- `src/` – core engine and algorithms  
+- `notebooks/` – analysis and demonstration notebooks  
+- `docs/` – architecture and design notes  
+- `examples/` – sample configurations and rule formats  
+- `tests/` – unit and integration tests  
+
+---
+
+## Ownership & Maintenance
+
+This project is maintained by the Risk Analytics team.
+
+Please follow internal coding standards and review procedures when contributing.
