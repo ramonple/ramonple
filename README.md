@@ -29,8 +29,7 @@ My interests sit at the intersection of **predictive modelling, explainable AI (
 
 Applied machine learning projects, explainable AI demos, optimisation-driven workflows, and end-to-end ML pipelines using synthetic or anonymised data.
 
-<img src="https://github.com/ramonple/ramonple/blob/f6271b523742f315811d88104e3b75a9e4d171d8/Projects_icons.png">
-
+<img src ="https://github.com/ramonple/ramonple/blob/fea0afff400c33f8cb2d019c7e099206db688cd2/project_icons/multiple%20icons.png">
 
 ---
 
