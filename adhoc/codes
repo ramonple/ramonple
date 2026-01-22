@@ -152,3 +152,48 @@ def rank_numeric_features_by_worst_tail_bad_rate(
     out = out.sort_values(["tail_bad_rate", "tail_n"], ascending=[False, False]).reset_index(drop=True)
     out.insert(0, "rank", np.arange(1, len(out) + 1))
     return out
+
+
+
+import matplotlib.pyplot as plt
+
+def plot_top_worst_tail_bad_rates(rank_table, top_n=20, use_cleaned_name=False, title=None):
+    """
+    Visualise top features by worst-tail bad rate (horizontal bars).
+
+    Parameters
+    ----------
+    rank_table : pd.DataFrame
+        Output from rank_numeric_features_by_worst_tail_bad_rate(...)
+    top_n : int
+        Number of top features to plot.
+    use_cleaned_name : bool
+        If True, uses 'cleaned_name' for labels; otherwise uses raw 'feature' names.
+    title : str or None
+        Plot title override.
+    """
+    if rank_table is None or rank_table.empty:
+        raise ValueError("rank_table is empty. Run rank_numeric_features_by_worst_tail_bad_rate first.")
+
+    label_col = "cleaned_name" if use_cleaned_name else "feature"
+
+    dfp = rank_table.head(top_n).copy()
+    # For a nicer horizontal bar chart ordering: smallest at bottom, largest at top
+    dfp = dfp.sort_values("tail_bad_rate", ascending=True)
+
+    plt.figure(figsize=(10, max(4, 0.35 * len(dfp))))
+    plt.barh(dfp[label_col].astype(str), dfp["tail_bad_rate"])
+
+    plt.xlabel(f"Bad rate in worst tail")
+    plt.ylabel("Feature")
+
+    # Build a sensible default title
+    if title is None:
+        # If your table includes tail_side like "top_5%" or "bottom_5%"
+        tail_side = dfp["tail_side"].iloc[-1] if "tail_side" in dfp.columns and len(dfp) > 0 else "worst tail"
+        title = f"Top {min(top_n, len(rank_table))} features by bad rate in {tail_side}"
+
+    plt.title(title)
+    plt.tight_layout()
+    plt.show()
+
