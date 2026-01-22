@@ -154,6 +154,106 @@ def rank_numeric_features_by_worst_tail_bad_rate(
     return out
 
 
+def rank_features_by_worst_tail_bad_balance(
+    data: pd.DataFrame,
+    rank_table: pd.DataFrame,
+    bad_flag: str,
+    bad_bal: str,
+    total_bad: float,
+):
+    """
+    Rank features by bad balance captured in the worst tail.
+
+    Parameters
+    ----------
+    data : DataFrame
+        Original dataset.
+    rank_table : DataFrame
+        Output of rank_numeric_features_by_worst_tail_bad_rate(...)
+    bad_flag : str
+        Target column (1 = bad).
+    bad_bal : str
+        Column name of bad balance / exposure per row.
+    total_bad : float
+        Total bad balance in the full dataset (scalar).
+
+    Returns
+    -------
+    DataFrame
+        Table ranked by worst-tail bad balance with volume, bad rate, and balance share.
+    """
+
+    results = []
+
+    for _, row in rank_table.iterrows():
+        col = row["feature"]
+        direction = row["direction_used"]
+        worst_pct = float(row["tail_side"].split("_")[-1].replace("%", "")) / 100
+
+        # Clean numeric column
+        x = pd.to_numeric(data[col], errors="coerce")
+        y = data[bad_flag]
+        bal = pd.to_numeric(data[bad_bal], errors="coerce")
+
+        mask = x.notna() & y.isin([0, 1]) & bal.notna()
+        x = x[mask]
+        y = y[mask]
+        bal = bal[mask]
+
+        if len(x) == 0:
+            continue
+
+        # Recompute cutoff & worst tail (same rule as ranking step)
+        if direction == 1:
+            cutoff = x.quantile(1 - worst_pct)
+            tail_mask = x >= cutoff
+            tail_side = f"top_{int(worst_pct*100)}%"
+        else:
+            cutoff = x.quantile(worst_pct)
+            tail_mask = x <= cutoff
+            tail_side = f"bottom_{int(worst_pct*100)}%"
+
+        # Volumes
+        tail_n = int(tail_mask.sum())
+        tail_bad_n = int(y.loc[tail_mask].sum())
+
+        # Balances
+        tail_total_balance = bal.loc[tail_mask].sum()
+        tail_bad_balance = bal.loc[tail_mask & (y == 1)].sum()
+
+        # Rates
+        tail_bad_rate = tail_bad_n / tail_n if tail_n > 0 else np.nan
+        bad_balance_share = tail_bad_balance / total_bad if total_bad > 0 else np.nan
+        bad_balance_rate = tail_bad_balance / tail_total_balance if tail_total_balance > 0 else np.nan
+
+        results.append({
+            "feature": col,
+            "cleaned_name": row.get("cleaned_name"),
+            "definition": row.get("definition"),
+            "direction_used": direction,
+            "tail_side": tail_side,
+            "cutoff": cutoff,
+
+            # volume info
+            "tail_n": tail_n,
+            "tail_bad_n": tail_bad_n,
+            "tail_bad_rate": tail_bad_rate,
+
+            # balance info (NEW CORE METRICS 🔥)
+            "tail_total_balance": tail_total_balance,
+            "tail_bad_balance": tail_bad_balance,
+            "bad_balance_rate_in_tail": bad_balance_rate,     # % of balance that is bad
+            "bad_balance_share_of_total": bad_balance_share, # % of TOTAL bad captured
+        })
+
+    out = pd.DataFrame(results)
+
+    # Rank by bad balance captured (most important for rules)
+    out = out.sort_values("tail_bad_balance", ascending=False).reset_index(drop=True)
+    out.insert(0, "rank", np.arange(1, len(out) + 1))
+
+    return out
+
 
 import plotly.express as px
 
