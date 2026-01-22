@@ -155,45 +155,61 @@ def rank_numeric_features_by_worst_tail_bad_rate(
 
 
 
-import matplotlib.pyplot as plt
+import plotly.express as px
 
-def plot_top_worst_tail_bad_rates(rank_table, top_n=20, use_cleaned_name=False, title=None):
-    """
-    Visualise top features by worst-tail bad rate (horizontal bars).
-
-    Parameters
-    ----------
-    rank_table : pd.DataFrame
-        Output from rank_numeric_features_by_worst_tail_bad_rate(...)
-    top_n : int
-        Number of top features to plot.
-    use_cleaned_name : bool
-        If True, uses 'cleaned_name' for labels; otherwise uses raw 'feature' names.
-    title : str or None
-        Plot title override.
-    """
+def plot_top_worst_tail_bad_rates_plotly(
+    rank_table,
+    top_n=20,
+    use_cleaned_name=False,
+    show_pct=True
+):
     if rank_table is None or rank_table.empty:
-        raise ValueError("rank_table is empty. Run rank_numeric_features_by_worst_tail_bad_rate first.")
+        raise ValueError("rank_table is empty.")
 
     label_col = "cleaned_name" if use_cleaned_name else "feature"
 
     dfp = rank_table.head(top_n).copy()
-    # For a nicer horizontal bar chart ordering: smallest at bottom, largest at top
     dfp = dfp.sort_values("tail_bad_rate", ascending=True)
 
-    plt.figure(figsize=(10, max(4, 0.35 * len(dfp))))
-    plt.barh(dfp[label_col].astype(str), dfp["tail_bad_rate"])
+    # Format display values
+    if show_pct:
+        dfp["bad_rate_display"] = (dfp["tail_bad_rate"] * 100).round(2).astype(str) + "%"
+        x_vals = dfp["tail_bad_rate"] * 100
+        x_label = "Bad rate in worst tail (%)"
+    else:
+        dfp["bad_rate_display"] = dfp["tail_bad_rate"].round(4).astype(str)
+        x_vals = dfp["tail_bad_rate"]
+        x_label = "Bad rate in worst tail"
 
-    plt.xlabel(f"Bad rate in worst tail")
-    plt.ylabel("Feature")
+    fig = px.bar(
+        dfp,
+        x=x_vals,
+        y=dfp[label_col].astype(str),
+        orientation="h",
+        text="bad_rate_display",
+        hover_data={
+            "tail_n": True,              # volume
+            "tail_bad_n": True,          # bad volume
+            "cutoff": True,
+            "definition": True,
+            "direction_used": True,
+            "tail_side": True,
+        },
+        labels={
+            "x": x_label,
+            "y": "Feature"
+        },
+        title=f"Top {min(top_n, len(rank_table))} features by worst-tail bad rate"
+    )
 
-    # Build a sensible default title
-    if title is None:
-        # If your table includes tail_side like "top_5%" or "bottom_5%"
-        tail_side = dfp["tail_side"].iloc[-1] if "tail_side" in dfp.columns and len(dfp) > 0 else "worst tail"
-        title = f"Top {min(top_n, len(rank_table))} features by bad rate in {tail_side}"
+    # Make labels look nice
+    fig.update_traces(textposition="outside")
 
-    plt.title(title)
-    plt.tight_layout()
-    plt.show()
+    fig.update_layout(
+        yaxis=dict(categoryorder="total ascending"),
+        xaxis_tickformat=".2f" if show_pct else ".3f",
+        margin=dict(l=200, r=50, t=60, b=50),
+        height=max(500, 35 * len(dfp))
+    )
 
+    fig.show()
