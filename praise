@@ -1,0 +1,41 @@
+#### ***Background***
+
+PRAISE is an AI-enabled decision optimisation framework designed to support responsible and explainable credit strategy development.
+
+The framework combines machine learning-driven feature discovery, rule optimisation, explainable AI validation, and embedded governance controls to generate transparent and operationally deployable decision rules.
+
+The engine is designed to support scalable, consistent and governance-ready decisioning across risk, fraud and compliance use cases.
+
+#### ***Purpose***
+
+The framework is designed to:
+
+- Identify stable and predictive risk signals from rich multi-source data
+- Generate interpretable and governance-ready decision rules
+- Optimise strategy trade-offs across risk, approval and customer outcomes
+- Embed expert policy constraints directly into rule generation
+- Support transparent, explainable and auditable decisioning workflows#### ***Core Components***
+
+***1. AI-Driven Feature Discovery***
+- Machine learning-based feature evaluation
+- Stability, predictiveness and governance screening
+- Explainable AI (XAI) validation
+
+***2. Rule Strategy Optimisation***
+- Automated rule construction and threshold optimisation
+- Business and policy constraint integration
+- Governance-ready rule recommendation generation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
