@@ -1,0 +1,98 @@
+def plot_density_with_mean(
+    data,
+    score_col="num_INOSF04",
+    group_col="pattern"
+):
+
+    plt.figure(figsize=(10,6))
+
+    groups = sorted(
+        data[group_col]
+        .dropna()
+        .unique()
+    )
+
+    for g in groups:
+
+        subset = data[
+            data[group_col]==g
+        ][score_col].dropna()
+
+        subset.plot(
+            kind="density",
+            label=f"{g}"
+        )
+
+        mean_v = subset.mean()
+
+        plt.axvline(
+            mean_v,
+            linestyle="--",
+            alpha=0.7
+        )
+
+    plt.xlabel(score_col)
+
+    plt.title(
+        f"{score_col} Density Comparison"
+    )
+
+    plt.legend(
+        bbox_to_anchor=(1.05,1)
+    )
+
+    plt.tight_layout()
+
+    plt.show()
+
+
+      
+def plot_density(
+    data,
+    score_col="num_INOSF04",
+    group_col="pattern",
+    filter_col=None,
+    filter_value=None,
+    figsize=(10,6)
+):
+
+    plot_df = data.copy()
+
+    # Optional filtering
+    if filter_col is not None:
+        plot_df = plot_df[
+            plot_df[filter_col] == filter_value
+        ]
+
+    plt.figure(figsize=figsize)
+
+    groups = sorted(plot_df[group_col].dropna().unique())
+
+    for g in groups:
+
+        subset = plot_df[
+            plot_df[group_col] == g
+        ][score_col].dropna()
+
+        subset.plot(
+            kind="density",
+            label=str(g)
+        )
+
+    plt.title(
+        f"{score_col} Density by {group_col}"
+    )
+
+    plt.xlabel(score_col)
+    plt.ylabel("Density")
+
+    plt.legend(
+        bbox_to_anchor=(1.05,1),
+        loc="upper left"
+    )
+
+    plt.grid(alpha=0.3)
+
+    plt.tight_layout()
+
+    plt.show()
