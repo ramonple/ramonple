@@ -1,0 +1,409 @@
+1. Introduction
+
+1.1 Background
+
+Traditional rule development processes within credit strategy environments have historically relied on manual analytical workflows involving feature investigation, threshold testing, segment analysis, rule construction, and governance review.
+
+While effective, increasing data complexity has introduced several challenges.
+
+Firstly, decision making increasingly incorporates multiple information sources including bureau data, multi-bureau data, behavioural information, engineered variables, and external datasets. The expansion of available features significantly increases analytical complexity and makes manual investigation increasingly time intensive.
+
+Secondly, traditional workflows typically explore only a limited number of feature combinations and threshold structures. As dimensionality increases, exhaustive exploration becomes impractical, increasing the possibility that stronger candidate rules remain unidentified.
+
+Thirdly, after predictive variables are identified, additional validation activities are usually required to ensure logical consistency, expected risk relationships, and governance compliance. Historically these activities relied heavily on manual review and became increasingly difficult to scale when transitioning from single-bureau to multi-bureau environments.
+
+Finally, modern rule development requires not only predictive capability but also explainability, interpretability, and governance readiness. Pure machine learning outputs often require additional interpretation before implementation.
+
+PRAISE (Policy Rule AI Strategy Engine) was developed to address these challenges.
+
+The framework combines statistical analysis, machine learning methods, explainable AI techniques, automated validation procedures, and optimisation approaches to support governance-ready rule construction.
+
+The framework is divided into three major sections:
+
+* Preparation
+* Section A – Feature Selection
+* Section B – Rule Construction
+
+⸻
+
+2. Preparation
+
+The preparation section is used to initialise the analytical environment and configure required inputs prior to analysis.
+
+Configuration activities include:
+
+* Input dataset preparation
+* Target variable definition
+* Feature configuration
+* Project parameter setup
+* Output configuration
+* Feature dictionary preparation
+
+The feature dictionary forms an important component within PRAISE and supports subsequent validation procedures.
+
+Typical information maintained includes:The preparation stage ensures that all downstream analytical modules operate under consistent definitions and validation requirements.
+
+Output Example
+
+Insert Figure 1: Project configuration interface
+
+⸻
+
+3. Section A – Feature Selection
+
+Section A focuses on identifying features suitable for downstream rule construction.
+
+The objective is to establish a feature set demonstrating predictive capability while maintaining logical consistency, explainability, and governance readiness.
+
+The feature selection process consists of:
+
+* Statistical analysis
+* Machine learning evaluation
+* Explainability assessment
+* Logic validation
+* Human validation
+
+⸻
+
+3.1 Information Value Analysis
+
+Information Value (IV) analysis is applied as the initial screening stage to assess predictive capability independently for each feature.
+
+IV metrics provide an initial indication of variable strength and support early feature prioritisation.
+
+Features failing to satisfy predefined thresholds may subsequently be excluded from downstream analysis.
+
+Outputs generated during this stage include:
+
+* Feature ranking tables
+* IV summaries
+* Visual ranking plots
+
+These outputs provide an initial understanding of predictive performance across the feature space.
+
+Output Example
+
+Insert Figure 2: Information Value summary table
+
+Insert Figure 3: Information Value ranking plot
+
+⸻
+
+3.2 Correlation Analysis
+
+Correlation analysis is subsequently performed to evaluate relationships between predictor variables and target outcomes as well as relationships among predictor variables themselves.
+
+Feature-to-target analysis provides an initial understanding of variable influence on risk outcomes.
+
+Feature-to-feature analysis identifies:
+
+* Redundant predictors
+* High correlation structures
+* Potential multicollinearity
+
+Heatmap visualisations are generated to support interpretation and feature refinement activities.
+
+This process reduces duplicated information and supports subsequent feature selection.
+
+Output Example
+
+Insert Figure 4: Correlation heatmap
+
+⸻
+
+3.3 Worst-Tail Analysis
+
+Traditional feature evaluation methods frequently focus on overall population performance. However, decline strategies primarily target higher-risk populations.
+
+Worst-tail analysis is therefore incorporated to identify features capable of effectively separating riskier customer segments.
+
+For each feature, the framework:
+
+1. Identifies high-risk segments
+2. Calculates corresponding performance metrics
+3. Evaluates concentration within risk tails
+
+Configurable tail definitions are supported including:
+
+* Worst 5%
+* Worst 10%
+
+The resulting outputs provide additional evidence for feature prioritisation during downstream rule construction.
+
+Output Example
+
+Insert Figure 5: Worst-tail performance table
+
+⸻
+
+3.4 Machine Learning Evaluation
+
+Following statistical analysis, PRAISE incorporates machine learning evaluation to further assess feature performance.
+
+The current implementation applies XGBoost models.
+
+XGBoost was selected due to:
+
+* Strong predictive performance
+* Flexible feature handling capability
+* Support for monotonic constraints
+
+Monotonic constraints preserve logical relationships between predictor variables and outcomes, improving interpretability and governance alignment.
+
+Feature selection remains iterative throughout this process.
+
+Candidate features may be refined according to:
+
+* Information Value performance
+* Worst-tail analysis
+* Feature importance
+* Expert judgement
+
+This stage supports identification of predictive and stable signals for downstream rule construction.
+
+Output Example
+
+Insert Figure 6: Feature importance output
+
+⸻
+
+3.5 Explainable AI (SHAP)
+
+To improve interpretability and reduce black-box behaviour, PRAISE incorporates Explainable AI methods using SHAP values.
+
+Two forms of explanation are currently supported.
+
+SHAP Summary Plot
+
+SHAP summary plots provide:
+
+* Feature ranking
+* Directionality
+* Contribution magnitude
+* Feature value distribution
+
+These visualisations provide insight into both the importance of variables and their influence on model predictions.
+
+⸻
+
+SHAP Waterfall Plot
+
+SHAP waterfall plots provide observation-level explanations.
+
+Individual feature contributions are displayed sequentially, illustrating how predictions evolve from baseline values to final outputs.
+
+Together these analyses improve transparency and support governance review.
+
+Output Example
+
+Insert Figure 7: SHAP summary plot
+
+Insert Figure 8: SHAP waterfall plot
+
+⸻
+
+3.6 Logic Validation
+
+Predictive capability alone is insufficient for downstream rule construction.
+
+Variables must additionally demonstrate logical consistency and satisfy business expectations.
+
+PRAISE therefore incorporates automated logic validation.
+
+Using information maintained within the feature dictionary, validation checks are performed against:
+
+* Valid ranges
+* Expected directions
+* Risk relationships
+
+Counterintuitive variables may subsequently be excluded.
+
+This process significantly reduces manual validation effort and improves scalability in multi-bureau environments.
+
+Output Example
+
+Insert Figure 9: Logic validation output
+
+⸻
+
+3.7 Human Validation Layer
+
+To complement machine evaluation, PRAISE introduces additional validation layers to support expert review.
+
+Decile Analysis
+
+Decile analysis is applied to assess ranking capability and separation performance.
+
+⸻
+
+Distribution Analysis
+
+Distribution analysis evaluates separation between:
+
+* Good populations
+* Bad populations
+
+These additional analyses ensure that final feature selection is supported by both machine evaluation and human judgement.
+
+Output Example
+
+Insert Figure 10: Decile analysis output
+
+Insert Figure 11: Distribution analysis output
+
+⸻
+
+4. Section B – Rule Construction
+
+Section B focuses on transforming selected features into executable rule structures.
+
+Features identified during Section A may be directly utilised or manually defined for downstream rule generation.
+
+The rule construction process incorporates:
+
+* Search space definition
+* Governance constraints
+* Rule optimisation
+* Performance evaluation
+
+⸻
+
+4.1 Search Space Definition
+
+Rule generation begins with search space construction.
+
+Search ranges may be derived from:
+
+* Feature dictionaries
+* User-defined configurations
+* Valid ranges
+* Direction constraints
+
+Earlier logic validation activities ensure that generated rules remain intuitive and aligned with expected behaviour.
+
+Output Example
+
+Insert Figure 12: Search space configuration
+
+⸻
+
+4.2 Governance Constraints
+
+Governance and business constraints may be introduced before rule generation.
+
+Supported configurations include:
+
+* Minimum bad capture requirements
+* Maximum production loss thresholds
+* Population constraints
+
+These controls ensure generated rules remain practically implementable and aligned with business objectives.
+
+Output Example
+
+Insert Figure 13: Constraint configuration output
+
+⸻
+
+4.3 Rule Evaluation Metrics
+
+Different use cases require different optimisation objectives.
+
+PRAISE therefore supports flexible metric selection.
+
+Risk-focused metrics include:
+
+* Bad rate
+* Marginal bad rate
+* Bad capture
+
+Business metrics include:
+
+* Production retention
+* Volume impact
+
+Efficiency metrics include:
+
+* Good-to-bad ratio
+
+Single or multiple optimisation objectives may be applied.
+
+⸻
+
+4.4 Rule Construction
+
+The framework currently supports:
+
+One-dimensional rules
+
+Single feature structures.
+
+⸻
+
+Two-dimensional rules
+
+Two-feature combinations.
+
+⸻
+
+Three-dimensional rules
+
+Multi-feature interactions.
+
+Logical operators supported include:
+
+AND
+
+OR
+
+Both structures are generated and evaluated.
+
+Although top-ranked outputs may occasionally contain predominantly OR structures, AND combinations are also generated and available within downstream outputs.
+
+Output Example
+
+Insert Figure 14: Eligible rule summary table
+
+⸻
+
+4.5 Rule Search and Optimisation
+
+Grid search methodology is applied to systematically explore feasible rule combinations.
+
+The framework evaluates candidate structures within the defined search space while respecting governance constraints.
+
+Generated outputs include:
+
+* Rule logic
+* Performance summaries
+* Ranking metrics
+* Candidate comparisons
+
+Rules may subsequently be prioritised according to selected objectives.
+
+Output Example
+
+Insert Figure 15: Rule optimisation output
+
+⸻
+
+5. Summary
+
+PRAISE provides an integrated framework combining:
+
+* Statistical analysis
+* Machine learning
+* Explainable AI
+* Automated validation
+* Rule optimisation
+* Human review
+
+to support explainable and governance-ready rule construction.
+
+The framework aims to reduce manual effort, improve exploration capability, and maintain transparency throughout the rule development lifecycle.
+
+
+
+
+
+
